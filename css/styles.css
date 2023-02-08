@@ -66,3 +66,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+body {
+  background-color: rgb(62 166 255);
+}
