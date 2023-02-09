@@ -79,19 +79,21 @@ body {
   width: 600px;
   height: 600px;
   background-color: white;
+  border-bottom: 1px solid black;
   display: flex;
   flex-direction: column;
 }
 
 .row {
   width: 100%;
-  border: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
   flex: 1;
   display: flex;
 }
 
 .square {
   width: 100%;
-  border: 1px solid red;
+  border-right: 1px solid black;
   flex: 1;
 }
