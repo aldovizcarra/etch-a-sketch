@@ -70,3 +70,8 @@ select {
 body {
   background-color: rgb(62 166 255);
 }
+
+.container {
+  width: 600px;
+  height: 600px;
+}
