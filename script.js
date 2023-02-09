@@ -8,15 +8,16 @@ function createRow(rows) {
   }
 }
 
-function createGrid(square) {
-  createRow(square);
-
+function createGrid(item) {
+  createRow(item);
   const rows = document.querySelectorAll('.row');
 
   rows.forEach((row) => {
-    const square = document.createElement('div');
-    square.classList.add('square');
-    row.appendChild(square);
+    for (let i = 1; i <= item; i++) {
+      const square = document.createElement('div');
+      square.classList.add('square');
+      row.appendChild(square);
+    }
   });
 }
 
