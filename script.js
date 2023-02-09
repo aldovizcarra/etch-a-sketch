@@ -7,3 +7,17 @@ function createRow(rows) {
     container.appendChild(row);
   }
 }
+
+function createGrid(square) {
+  createRow(square);
+
+  const rows = document.querySelectorAll('.row');
+
+  rows.forEach((row) => {
+    const square = document.createElement('div');
+    square.classList.add('square');
+    row.appendChild(square);
+  });
+}
+
+createGrid(4);
