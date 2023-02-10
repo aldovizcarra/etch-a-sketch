@@ -79,6 +79,11 @@ body {
   display: flex;
 }
 
+.modes {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   width: 600px;
   height: 600px;
