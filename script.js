@@ -19,6 +19,14 @@ function createGrid(item) {
       row.appendChild(square);
     }
   });
+
+  const sqrs = document.querySelectorAll('.square');
+
+  sqrs.forEach((sqr) => {
+    sqr.addEventListener('mouseover', (e) => {
+      sqr.style.backgroundColor = 'black';
+    });
+  });
 }
 
-createGrid(4);
+createGrid(20);
