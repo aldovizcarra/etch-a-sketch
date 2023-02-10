@@ -29,11 +29,11 @@ function createGrid(item) {
   });
 }
 
-createGrid(20);
+createGrid(getRangeValue());
 
 function getRangeValue() {
   const range = document.querySelector('#range');
+  const ouput = document.querySelector('.output');
+  ouput.textContent = `${range.value} x ${range.value}`;
   return parseInt(range.value);
 }
-
-console.log(getRangeValue());
