@@ -29,11 +29,27 @@ function createGrid(item) {
   });
 }
 
-createGrid(getRangeValue());
-
 function getRangeValue() {
   const range = document.querySelector('#range');
   const ouput = document.querySelector('.output');
   ouput.textContent = `${range.value} x ${range.value}`;
   return parseInt(range.value);
 }
+
+createGrid(getRangeValue());
+
+document.querySelector('#range').addEventListener('input', (e) => {
+  const squares = document.querySelectorAll('.square');
+  const rows = document.querySelectorAll('.row');
+
+  squares.forEach((square) => {
+    square.parentNode.removeChild(square);
+  });
+  rows.forEach((row) => {
+    row.parentNode.removeChild(row);
+  });
+
+  const output = document.querySelector('.output');
+  output.textContent = `${e.target.value} x ${e.target.value}`;
+  createGrid(getRangeValue());
+});
