@@ -75,6 +75,10 @@ body {
   align-items: center;
 }
 
+.wrapper {
+  display: flex;
+}
+
 .container {
   width: 600px;
   height: 600px;
