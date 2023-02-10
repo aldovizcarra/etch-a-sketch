@@ -30,3 +30,10 @@ function createGrid(item) {
 }
 
 createGrid(20);
+
+function getRangeValue() {
+  const range = document.querySelector('#range');
+  return parseInt(range.value);
+}
+
+console.log(getRangeValue());
