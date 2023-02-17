@@ -9,6 +9,7 @@ function createRow(rows) {
 }
 
 function createGrid(item) {
+  item = item();
   createRow(item);
   const rows = document.querySelectorAll('.row');
 
@@ -36,7 +37,7 @@ function getRangeValue() {
   return parseInt(range.value);
 }
 
-createGrid(getRangeValue());
+createGrid(getRangeValue);
 
 document.querySelector('#range').addEventListener('input', (e) => {
   const squares = document.querySelectorAll('.square');
@@ -51,5 +52,5 @@ document.querySelector('#range').addEventListener('input', (e) => {
 
   const output = document.querySelector('.output');
   output.textContent = `${e.target.value} x ${e.target.value}`;
-  createGrid(getRangeValue());
+  createGrid(getRangeValue);
 });
