@@ -1,3 +1,5 @@
+createGrid(getRangeValue);
+
 function createRow(rows) {
   const container = document.querySelector('.container');
 
@@ -36,8 +38,6 @@ function getRangeValue() {
   ouput.textContent = `${range.value} x ${range.value}`;
   return parseInt(range.value);
 }
-
-createGrid(getRangeValue);
 
 document.querySelector('#range').addEventListener('input', (e) => {
   const squares = document.querySelectorAll('.square');
