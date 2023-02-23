@@ -26,7 +26,7 @@ function createGrid(item) {
   const sqrs = document.querySelectorAll('.square');
 
   sqrs.forEach((sqr) => {
-    sqr.addEventListener('mouseover', (e) => {
+    sqr.addEventListener('mouseover', () => {
       sqr.style.backgroundColor = 'black';
     });
   });
@@ -53,4 +53,48 @@ range.addEventListener('input', (e) => {
   const output = document.querySelector('.output');
   output.textContent = `${e.target.value} x ${e.target.value}`;
   createGrid(getRangeValue);
+});
+
+const blackBtn = document.querySelector('.black-btn');
+const rainbowBtn = document.querySelector('.rainbow-btn');
+const eraserBtn = document.querySelector('.eraser-btn');
+const clearBtn = document.querySelector('.clear-btn');
+
+blackBtn.addEventListener('click', () => {
+  const sqrs = document.querySelectorAll('.square');
+
+  sqrs.forEach((sqr) => {
+    sqr.addEventListener('mouseover', () => {
+      sqr.style.backgroundColor = 'black';
+    });
+  });
+});
+
+rainbowBtn.addEventListener('click', () => {
+  const sqrs = document.querySelectorAll('.square');
+
+  sqrs.forEach((sqr) => {
+    sqr.addEventListener('mouseover', () => {
+      const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      sqr.style.backgroundColor = `#${randomColor}`;
+    });
+  });
+});
+
+eraserBtn.addEventListener('click', () => {
+  const sqrs = document.querySelectorAll('.square');
+
+  sqrs.forEach((sqr) => {
+    sqr.addEventListener('mouseover', () => {
+      sqr.style.backgroundColor = 'white';
+    });
+  });
+});
+
+clearBtn.addEventListener('click', () => {
+  const sqrs = document.querySelectorAll('.square');
+
+  sqrs.forEach((sqr) => {
+    sqr.style.backgroundColor = 'white';
+  });
 });
