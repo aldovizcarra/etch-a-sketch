@@ -39,7 +39,7 @@ function getRangeValue() {
   return parseInt(range.value);
 }
 
-document.querySelector('#range').addEventListener('input', (e) => {
+range.addEventListener('input', (e) => {
   const squares = document.querySelectorAll('.square');
   const rows = document.querySelectorAll('.row');
 
