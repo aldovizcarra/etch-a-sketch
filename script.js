@@ -66,6 +66,7 @@ blackBtn.addEventListener('click', () => {
   sqrs.forEach((sqr) => {
     sqr.addEventListener('mouseover', () => {
       sqr.style.backgroundColor = 'black';
+      sqr.style.opacity = '1';
     });
   });
 });
@@ -77,11 +78,12 @@ rainbowBtn.addEventListener('click', () => {
     sqr.addEventListener('mouseover', () => {
       const randomColor = Math.floor(Math.random() * 16777215).toString(16);
       sqr.style.backgroundColor = `#${randomColor}`;
+      sqr.style.opacity = '1';
     });
   });
 });
 
-eraserBtn.addEventListener('click', () => {
+eraserBtn.addEventListener('click', (e) => {
   const sqrs = document.querySelectorAll('.square');
 
   sqrs.forEach((sqr) => {
@@ -91,10 +93,11 @@ eraserBtn.addEventListener('click', () => {
   });
 });
 
-clearBtn.addEventListener('click', () => {
+clearBtn.addEventListener('click', (e) => {
   const sqrs = document.querySelectorAll('.square');
 
   sqrs.forEach((sqr) => {
     sqr.style.backgroundColor = 'white';
+    sqr.style.opacity = '1';
   });
 });
