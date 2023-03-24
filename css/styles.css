@@ -75,8 +75,14 @@ body {
   align-items: center;
 }
 
+h1 {
+  padding-left: 8.5rem;
+  padding-bottom: 1rem;
+}
+
 .wrapper {
   display: flex;
+  gap: 2rem;
 }
 
 .modes {
